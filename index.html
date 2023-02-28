@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasty Hut</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="mx-w-[1440px] mx-16">
+    <header>
+        <div class="flex justify-between items-center my-4 px-12">
+            <img class="w-32 h-8" src="images/Tasty_HUT.png" alt="">
+            <button class="btn btn-warning">Sign Up</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="banner-container flex justify-center items-center">
+                <div class="text-center">
+                    <div class="w-[770px] ">
+                        <h1 class="text-white text-[65px] mx-auto px-8 h-[160px] mb-6 font-bold ">Taste Our Delicious Best Foods
+                        </h1>
+                        <p class="text-white text-lg my-6">There are many variations of passages of Lorem Ipsum available,
+                            but the majority have suffered
+                            alteration in some form, by injected humou.</p>
+                    </div>
+                    <div>
+                        <input id="search-input" type="text" placeholder="Type here"
+                            class="input input-bordered input-primary w-full max-w-xs" />
+                        <button id="btn-search" class="btn btn-warning -mx-4 font-semibold">Search</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="text-4xl font-bold my-8 text-center">Your Favourite Food</h1>
+            <div id="items-container">
+
+            </div>
+        </section>
+    </main>
+
+
+    <!-- js link -->
+    <script src="js/app.js/app.js"></script>
+</body>
+
+</html>

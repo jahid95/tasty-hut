@@ -1,0 +1,17 @@
+.banner-container{
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0,0.5)), url(../images/banner_1.png);    
+    background-size: cover;
+    height: 650px;
+    max-width: 1440px;
+}
+
+#items-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-card{
+    width: 75%;
+    margin: auto;
+}
