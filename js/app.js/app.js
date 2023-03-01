@@ -20,11 +20,27 @@ const displayMeals = meals =>{
           <h2 class="card-title">New movie is released!</h2>
           <p>Click the button to watch on Jetflix app.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Watch</button>
+          <label onclick="mealDetails('${meal.idMeal}')" for="my-modal-3" class="btn">open modal</label>
           </div>
         </div>
       </div>
         `;
         mealContainer.appendChild(div);
     })
+}
+
+function mealDetails(id){
+  const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
+  fetch(url)
+  .then(res => res.json())
+  .then(data => displayMealDetails(data.meals[0]))
+}
+
+function displayMealDetails(meal){
+ document.getElementById('modal-details').innerHTML =`
+ <figure><img src="${meal.strMealThumb}" alt="Movie"/></figure>
+ <h2 class="text-4xl font-bold text-red-600 my-4">${meal.strCategory}</h2>
+ <p>${meal.strInstructions}</p> 
+
+  `;
 }
